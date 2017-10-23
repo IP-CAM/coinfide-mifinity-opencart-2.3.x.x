@@ -47,7 +47,8 @@ class ControllerExtensionPaymentMiFinity extends Controller {
         $data['entry_password'] = $this->language->get('entry_password');
         $data['entry_api_key'] = $this->language->get('entry_api_key');
 //        $data['entry_account_holder_id'] = $this->language->get('entry_account_holder_id');
-        $data['entry_account_number'] = $this->language->get('entry_account_number');
+        $data['entry_account_number_eur'] = $this->language->get('entry_account_number_eur');
+        $data['entry_account_number_usd'] = $this->language->get('entry_account_number_usd');
 //		$data['entry_password'] = $this->language->get('entry_password');
 //		$data['entry_transaction_method'] = $this->language->get('entry_transaction_method');
 		$data['entry_sort_order'] = $this->language->get('entry_sort_order');
@@ -56,7 +57,8 @@ class ControllerExtensionPaymentMiFinity extends Controller {
 		$data['help_username'] = $this->language->get('help_username');
         $data['help_api_key'] = $this->language->get('help_api_key');
 //        $data['help_account_holder_id'] = $this->language->get('help_account_holder_id');
-        $data['help_account_number'] = $this->language->get('help_account_number');
+        $data['help_account_number_eur'] = $this->language->get('help_account_number_eur');
+        $data['help_account_number_usd'] = $this->language->get('help_account_number_usd');
 		$data['help_password'] = $this->language->get('help_password');
 //		$data['help_transaction_method'] = $this->language->get('help_transaction_method');
 
@@ -103,10 +105,16 @@ class ControllerExtensionPaymentMiFinity extends Controller {
 //            $data['error_account_holder_id'] = '';
 //        }
 
-        if (isset($this->error['account_number'])) {
-            $data['error_account_number'] = $this->error['account_number'];
+        if (isset($this->error['account_number_eur'])) {
+            $data['error_account_number_eur'] = $this->error['account_number_eur'];
         } else {
-            $data['error_account_number'] = '';
+            $data['error_account_number_eur'] = '';
+        }
+
+        if (isset($this->error['account_number_usd'])) {
+            $data['error_account_number_usd'] = $this->error['account_number_usd'];
+        } else {
+            $data['error_account_number_usd'] = '';
         }
 
 //		if (isset($this->error['password'])) {
@@ -232,10 +240,16 @@ class ControllerExtensionPaymentMiFinity extends Controller {
 //            $data['mifinity_account_holder_id'] = $this->config->get('mifinity_account_holder_id');
 //        }
 
-        if (isset($this->request->post['mifinity_account_number'])) {
-            $data['mifinity_account_number'] = $this->request->post['mifinity_account_number'];
+        if (isset($this->request->post['mifinity_account_number_eur'])) {
+            $data['mifinity_account_number_eur'] = $this->request->post['mifinity_account_number_eur'];
         } else {
-            $data['mifinity_account_number'] = $this->config->get('mifinity_account_number');
+            $data['mifinity_account_number_eur'] = $this->config->get('mifinity_account_number_eur');
+        }
+
+        if (isset($this->request->post['mifinity_account_number_usd'])) {
+            $data['mifinity_account_number_usd'] = $this->request->post['mifinity_account_number_usd'];
+        } else {
+            $data['mifinity_account_number_usd'] = $this->config->get('mifinity_account_number_usd');
         }
 
 //		if (isset($this->request->post['mifinity_password'])) {
@@ -457,8 +471,11 @@ class ControllerExtensionPaymentMiFinity extends Controller {
 //        if (!$this->request->post['mifinity_account_holder_id']) {
 //            $this->error['account_holder_id'] = $this->language->get('error_account_holder_id');
 //        }
-        if (!$this->request->post['mifinity_account_number']) {
-            $this->error['account_number'] = $this->language->get('error_account_number');
+        if (!$this->request->post['mifinity_account_number_eur']) {
+            $this->error['account_number_eur'] = $this->language->get('error_account_number_eur');
+        }
+        if (!$this->request->post['mifinity_account_number_usd']) {
+            $this->error['account_number_usd'] = $this->language->get('error_account_number_usd');
         }
 //		if (!$this->request->post['mifinity_password']) {
 //			$this->error['password'] = $this->language->get('error_password');

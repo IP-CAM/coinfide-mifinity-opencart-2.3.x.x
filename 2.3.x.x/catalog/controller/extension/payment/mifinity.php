@@ -128,8 +128,12 @@ class ControllerExtensionPaymentMiFinity extends Controller {
         $request->money->currency = $order_info['currency_code'];
 
         $request->description = $invoice_desc;
-        //todo
-        $request->destinationAccountNumber = $this->config->get('mifinity_account_number');
+        if ($order_info['currency_code'] == 'USD'){
+            $request->destinationAccountNumber = $this->config->get('mifinity_account_number_usd');
+        } else if($order_info['currency_code'] == 'EUR') {$request->destinationAccountNumber = $this->config->get('mifinity_account_number_eur');
+        } else {$request->destinationAccountNumber = $this->config->get('mifinity_account_number_eur');
+        }
+
         $request->checkThreeDSecure = true;
 
 

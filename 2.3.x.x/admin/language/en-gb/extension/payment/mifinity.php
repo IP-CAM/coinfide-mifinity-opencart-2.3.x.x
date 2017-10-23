@@ -23,7 +23,8 @@ $_['entry_username'] = 'MiFinity User Name';
 $_['entry_password'] = 'MiFinity User Password';
 $_['entry_api_key'] = 'MiFinity API Key';
 //$_['entry_account_holder_id'] = 'MiFinity accountHolderId';
-$_['entry_account_number'] = 'MiFinity Account Number';
+$_['entry_account_number_eur'] = 'MiFinity Account Number EURO';
+$_['entry_account_number_usd'] = 'MiFinity Account Number USD';
 //$_['entry_payment_type']			= 'Payment Type';
 $_['entry_geo_zone'] = 'Geo Zone';
 $_['entry_status'] = 'Status';
@@ -36,7 +37,8 @@ $_['error_username']				= 'MiFinity Username (Login) is required!';
 $_['error_password']				= 'MiFinity Password is required!';
 $_['error_api_key']				    = 'MiFinity API Key is required!';
 //$_['error_account_holder_id']		= 'MiFinity accountHolderId is required!';
-$_['error_account_number']			= 'MiFinity Account Number is required!';
+$_['error_account_number_eur']			= 'MiFinity Account Number is required!';
+$_['error_account_number_usd']			= 'MiFinity Account Number is required!';
 //$_['error_payment_type']			= 'At least one payment type is required!';
 
 // Help hints
@@ -45,7 +47,8 @@ $_['help_username']					= 'Your MiFinity Account Name.';
 $_['help_password']					= 'Your MiFinity Account Password.';
 $_['help_api_key']					= 'Your MiFinity API Key from your account.';
 //$_['help_account_holder_id']		= 'MiFinity accountHolderId from Auth Request';
-$_['help_account_number']			= 'MiFinity Account Number by Currency Value';
+$_['help_account_number_eur']			= 'MiFinity Account Number for EURO';
+$_['help_account_number_usd']			= 'MiFinity Account Number for USD';
 //$_['help_transaction_method']		= 'Authorisation is only available for Australian banks';
 
 // Order page - payment tab

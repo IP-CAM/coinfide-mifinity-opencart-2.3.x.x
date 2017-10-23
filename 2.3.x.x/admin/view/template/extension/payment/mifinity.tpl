@@ -91,18 +91,31 @@
                 </div>
             </div>
             <div class="form-group required">
-                <label class="col-sm-2 control-label" for="input-account-number">
+                <label class="col-sm-2 control-label" for="input-account-number-eur">
                     <span data-toggle="tooltip"
-                          title="<?php echo $help_account_number; ?>"><?php echo $entry_account_number; ?></span>
+                          title="<?php echo $help_account_number_eur; ?>"><?php echo $entry_account_number_eur; ?></span>
                 </label>
                 <div class="col-sm-10">
-                    <input type="text" name="mifinity_account_number" value="<?php echo $mifinity_account_number; ?>"
-                           placeholder="<?php echo $entry_account_number; ?>" id="input-account-number" class="form-control"/>
-                    <?php if ($error_account_number) { ?>
-                    <div class="text-danger"><?php echo $error_account_number; ?></div>
+                    <input type="text" name="mifinity_account_number_eur" value="<?php echo $mifinity_account_number_eur; ?>"
+                           placeholder="<?php echo $entry_account_number_eur; ?>" id="input-account-number-eur" class="form-control"/>
+                    <?php if ($error_account_number_eur) { ?>
+                    <div class="text-danger"><?php echo $error_account_number_eur; ?></div>
                     <?php } ?>
                 </div>
             </div>
+	        <div class="form-group required">
+		        <label class="col-sm-2 control-label" for="input-account-number-usd">
+                    <span data-toggle="tooltip"
+                          title="<?php echo $help_account_number_usd; ?>"><?php echo $entry_account_number_usd; ?></span>
+		        </label>
+		        <div class="col-sm-10">
+			        <input type="text" name="mifinity_account_number_usd" value="<?php echo $mifinity_account_number_usd; ?>"
+			               placeholder="<?php echo $entry_account_number_usd; ?>" id="input-account-number-usd" class="form-control"/>
+			        <?php if ($error_account_number_usd) { ?>
+			        <div class="text-danger"><?php echo $error_account_number_usd; ?></div>
+			        <?php } ?>
+		        </div>
+	        </div>
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-status"><?php echo $entry_status; ?></label>
             <div class="col-sm-10">
